@@ -12,10 +12,31 @@ namespace Clasa_Elevi
         static List<Elev> elevi = new List<Elev>();
         static void Main(string[] args)
         {
+            Load();
 
+            for (int i = 0; i < elevi.Count - 1; i++)
+            {
+                for (int j = i + 1; j < elevi.Count; j++)
+                    if ((elevi[i].media < elevi[j].media) || ((elevi[i].media < elevi[j].media) && (StringCompare(elevi[i].name, elevi[j].name) < 0)))
+                    {
+                        Elev aux = elevi[i];
+                        elevi[i] = elevi[j];
+                        elevi[j] = aux;
+                    }
+            }
+
+            elevi.Sort((x, y) =>
+            {
+                var result = y.media.CompareTo(x.media);
+                if (result == 0) 
+                    result = y.name.CompareTo(x.name);
+                return result;
+            });
+
+            Save();
         }
 
-        static void save()
+        static void Save()
         {
             TextWriter dataSave = new StreamWriter(@"..\..\data.out");
             foreach (Elev e in elevi)
@@ -24,7 +45,7 @@ namespace Clasa_Elevi
         }
         static void Load()
         {
-            TextReader dataLoad = new StreamReader(@"..\..\data");
+            TextReader dataLoad = new StreamReader(@"..\..\data.txt");
             string buffer;
             while ((buffer = dataLoad.ReadLine()) != null)
                 elevi.Add(new Elev(buffer));

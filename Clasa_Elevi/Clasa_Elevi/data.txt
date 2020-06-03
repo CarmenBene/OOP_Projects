@@ -1,3 +1,4 @@
 ﻿Ion Geeorge 6 4 8 9 10 10 2
-Alfa Vasile 4 6 8 9 9
+Ionescu Adrian 4 6 8 9 9
 Popescu Vasile 2 8 8
+Bene Carmen 4 8 9 9 10
