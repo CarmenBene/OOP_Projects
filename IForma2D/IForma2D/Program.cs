@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IForma2D
+namespace Interfata_IForma2D
 {
     class Program
     {
@@ -14,6 +14,7 @@ namespace IForma2D
             void LungimeaFrontierei();
             string denumire { get; }
         }
+       
         static void Main(string[] args)
         {
 
