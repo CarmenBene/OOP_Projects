@@ -14,13 +14,19 @@ namespace Interfata_IForma2D
             double LungimeaFrontierei();
             string denumire { get; }
         }
-       
+
         static void Main(string[] args)
-        { 
-            Console.WriteLine("Aria patratului este: "+ Patrat.Arie(4));
-            Console.WriteLine("Perimetrul patratului este: "+ Patrat.LungimeaFrontierei(4));
-            Console.WriteLine("Aria cercului este: "+ Cerc.Arie(5));
-            Console.WriteLine("Circumferinta cercului este: "+ Cerc.LungimeaFrontierei(5));
+        {
+            Patrat P = new Patrat(4);
+            GetValues(P);
+            Cerc C = new Cerc(5);
+            GetValues(C);
+        }
+
+        public static void GetValues(IForma2D values)
+        {
+            Console.WriteLine($"Aria {values.denumire} este: {values.Arie()}");
+            Console.WriteLine($"Perimetrul {values.denumire} este: {values.LungimeaFrontierei()}");
         }
     }
 }

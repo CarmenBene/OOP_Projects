@@ -1,6 +1,12 @@
-﻿namespace Interfata_IForma2D
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace IForma2D
 {
-    public interface IForma2D
+    interface IForma2D
     {
     }
 }

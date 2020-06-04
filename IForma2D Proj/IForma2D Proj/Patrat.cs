@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectIForma2D
+namespace IForma2D_Proj
 {
-    public class Patrat : IForma2D
+    class Patrat : IForma2d
     {
-        public string denumire => "Patrat";
+        public string Denumire => "Patrat";
+
         public double l;
         public Patrat(double l)
         {
