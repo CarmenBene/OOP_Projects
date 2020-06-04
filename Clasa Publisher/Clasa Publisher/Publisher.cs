@@ -11,9 +11,13 @@ namespace Clasa_Publisher
     {
         public event iteratie eveniment;
 
-        static void DeclansareEveniment()
-        { 
-
+        public void DeclansareEveniment()
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                if (eveniment != null)
+                    eveniment(i);
+            }
         }
 
     }
