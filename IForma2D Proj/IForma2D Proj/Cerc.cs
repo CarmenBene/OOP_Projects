@@ -8,7 +8,7 @@ namespace IForma2D_Proj
 {
     class Cerc : IForma2d
     {
-        public string Denumire => "Cerc";
+        public string Denumire => "cerc";
 
         public double radius;
         static double pi = Math.PI;

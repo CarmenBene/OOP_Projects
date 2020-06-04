@@ -8,7 +8,7 @@ namespace IForma2D_Proj
 {
     class Patrat : IForma2d
     {
-        public string Denumire => "Patrat";
+        public string Denumire => "patrat";
 
         public double l;
         public Patrat(double l)
