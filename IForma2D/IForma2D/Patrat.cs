@@ -8,16 +8,16 @@ namespace Interfata_IForma2D
 {
     public class Patrat : IForma2D
     {
-        public string denumire => throw new NotImplementedException();
+        public string denumire = "Patrat";
 
-        public void Arie()
+        public static double Arie(double l)
         {
-            throw new NotImplementedException();
+            return l * l;
         }
 
-        public void LungimeaFrontierei()
+        public static int LungimeaFrontierei(int l)
         {
-            throw new NotImplementedException();
+            return 4 * l;
         }
     }
 }

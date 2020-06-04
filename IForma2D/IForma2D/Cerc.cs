@@ -8,16 +8,17 @@ namespace Interfata_IForma2D
 {
     public class Cerc : IForma2D
     {
-        public string denumire => throw new NotImplementedException();
+        public string denumire = "Cerc";
+        static double pi = Math.PI;
 
-        public void Arie()
+        public static double Arie(double radius)
         {
-            throw new NotImplementedException();
+            return pi * Math.Pow(radius, 2);
         }
 
-        public void LungimeaFrontierei()
+        public static double LungimeaFrontierei(double radius)
         {
-            throw new NotImplementedException();
+            return (2 * pi) * radius;
         }
     }
 }
