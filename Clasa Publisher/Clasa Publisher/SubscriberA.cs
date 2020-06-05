@@ -8,5 +8,9 @@ namespace Clasa_Publisher
 {
     class SubscriberA
     {
+        public void HandlerA(int n)
+        {
+            Console.WriteLine("Subscriber A a primit notificare " + n);
+        }
     }
 }
