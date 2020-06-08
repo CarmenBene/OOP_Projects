@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Clasa_Angajat
 {
@@ -24,7 +25,7 @@ namespace Clasa_Angajat
             t[a.Length] = add;
             a = t;
         }
-         
+
         public void Remove(string remove)
         {
             int idx = -1;
@@ -50,5 +51,34 @@ namespace Clasa_Angajat
                 a = t;
             }
         }
+
+        public List<string> View()
+        {
+            List<string> toR = new List<string>();
+            foreach (Angajat angajat in a)
+            {
+                toR.Add(angajat.ToString());
+            }
+            return toR;
+        }
+        public void Load()
+        {
+            TextReader dL = new StreamReader(@"..\..\data.txt");
+            string buffer;
+            while ((buffer = dL.ReadLine()) != null)
+            {
+                Add(new Angajat(buffer));
+            }
+        }
+        public void Save()
+        {
+            TextWriter dS = new StreamWriter(@"..\..\data.out");
+            foreach (Angajat ang in a)
+            {
+                dS.WriteLine(ang.ToString());
+            }
+            dS.Close();
+        }
+      
     }
 }
