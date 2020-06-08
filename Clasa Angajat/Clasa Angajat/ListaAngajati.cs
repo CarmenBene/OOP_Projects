@@ -79,6 +79,10 @@ namespace Clasa_Angajat
             }
             dS.Close();
         }
-      
+        public void Sort()
+        {
+            IComparer<Angajat> T = new Comparer();
+            Array.Sort(a, T);
+        }
     }
 }

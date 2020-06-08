@@ -22,5 +22,9 @@ namespace Clasa_Angajat
             this.nume = nume;
             this.vechime = vechime;
         }
+        public override string ToString()
+        {
+            return nume + " " + vechime;
+        }
     }
 }
