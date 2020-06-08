@@ -9,22 +9,25 @@ namespace Clasa_Angajat
     class Angajat
     {
         public string nume;
-        public int vechime;
+        public int ani;
+        public int luni;
 
         public Angajat(string data)
         {
             string[] local = data.Split(' ');
             nume = local[0] + " " + local[1];
-            vechime = int.Parse(local[2]);
+            ani = int.Parse(local[2]);
+            luni = int.Parse(local[3]);
         }
-        public Angajat(string nume, int vechime)
+        public Angajat(string nume, int ani,int luni )
         {
             this.nume = nume;
-            this.vechime = vechime;
+            this.ani = ani;
+            this.luni = luni;
         }
         public override string ToString()
         {
-            return nume + " " + vechime;
+            return nume + " " + ani+"ani "+luni+"luni ";
         }
     }
 }

@@ -63,7 +63,7 @@ namespace Clasa_Angajat
         }
         public void Load()
         {
-            TextReader dL = new StreamReader(@"..\..\data.txt");
+            TextReader dL = new StreamReader(@"..\..\data.in");
             string buffer;
             while ((buffer = dL.ReadLine()) != null)
             {

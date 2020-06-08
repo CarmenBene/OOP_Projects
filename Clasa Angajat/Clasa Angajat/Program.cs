@@ -10,7 +10,21 @@ namespace Clasa_Angajat
     {
         static void Main(string[] args)
         {
+            ListaAngajati MyAngajati = new ListaAngajati();
+            MyAngajati.Load();
 
+            foreach (string s in MyAngajati.View())
+            {
+                Console.WriteLine(s.ToString());
+            }
+            Console.WriteLine();
+            MyAngajati.Sort();
+            foreach (string s in MyAngajati.View())
+            {
+                Console.WriteLine(s.ToString());
+            }
+
+            MyAngajati.Save();
         }
     }
 }
